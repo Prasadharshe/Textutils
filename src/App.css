@@ -1,0 +1,116 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form{
+  background-color: red;
+}
+
+.navbar-custom {
+  background-color: #ffd500;
+}
+
+body{
+background-color: #fff5c6;
+}
+
+.icon{
+  color: black;
+}
+
+.margin{
+  margin-right: 5px;
+}
+
+
+/* UPDATE
+
+For Anyone who is doing this with React Router V6 as of  8th May 2023 . Few things have been updated ..
+
+1. You cannot use Switch anymore with v6 you need to use BrowserRouter(Its same as Router) instead .Don't forget to import the same dependency
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+2. Below is the syntax to follow with v6 React Router. Example ; To render About as /about use path '/about' and Element=<About />
+
+<BrowserRouter>
+	<Routes>
+		<Route path='Path You want to use' element={<What you want to render >}/> 
+		// Example-->  <Route path="/about" element={<About />}></Route>	
+	</Routes>
+</BrowserRouter>
+================================================================================
+
+Except these everything works as shown by Harry. Don't forget to Use Link and To which is shown in the video. 
+
+Pasting return() part from App.js as reference 
+
+=============================================================================
+
+return (
+    <>
+      <BrowserRouter>
+        <Navbar
+          title="TextUtils2"
+          aboutText="TextAbout"
+          mode={mode}
+          toggleMode={toggleMode}
+        />
+        <Alert alert={alert} />
+        <div className="container my-4" mode={mode}>
+          <Routes>
+            <Route exact path="/about" element={<About />}></Route>
+            <Route
+              exact path="/"
+              element={
+                <Text box
+                  showAlert={showAlert}
+                  heading="Enter Text to analyze "
+                  mode={mode}
+                />
+              }
+            ></Route>
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </>
+  );
+
+-------------
+
+Hope this helps. */
